@@ -1,13 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: oklch(60% 0.1 270);
-  --color-secondary: oklch(60% 0.1 90);
-  --color-dark: oklch(20% 0.1 270);
+  --color-primary: #e10600;
+  --color-secondary: #64748b;
+  --color-dark: #15151e;
 }
 
 @layer utilities {
    body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'San Francisco', sans-serif;
+   }
+
+   .hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-dark;
+   }
+
+   .hamburger-active > span:nth-child(1){
+    @apply rotate-45;
+   }
+
+   .hamburger-active > span:nth-child(2){
+    @apply scale-0;
+   }
+
+   .hamburger-active > span:nth-child(3){
+    @apply -rotate-45;
+   }
+
+   .navbar-fixed {
+    @apply fixed z-[9999] bg-white/40 backdrop-blur-lg shadow-md;
    }
 }
