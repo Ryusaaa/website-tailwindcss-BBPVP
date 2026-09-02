@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(60% 0.1 270);
+  --color-secondary: oklch(60% 0.1 90);
+  --color-dark: oklch(20% 0.1 270);
+}
+
+@layer utilities {
+   body {
+    font-family: 'Inter', sans-serif;
+   }
+}
